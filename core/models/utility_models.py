@@ -149,6 +149,7 @@ class DiffusionJob(Job):
         min_length=1,
     )
     model_type: ImageModelType = ImageModelType.SDXL
+    hours_to_complete: int = Field(..., description="Estimated time to complete the job")
 
 
 class Role(str, Enum):
