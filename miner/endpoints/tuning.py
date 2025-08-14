@@ -126,7 +126,10 @@ async def tune_model_diffusion(
             train_request.dataset_zip, f"{cst.DIFFUSION_DATASET_DIR}/{train_request.task_id}.zip"
         )
         logger.info(train_request.dataset_zip)
-
+        logger.info("iz tuning" * 10)
+        print(worker_config)
+        print(train_request)
+        logger.info("iz tuning" * 10)
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -136,6 +139,7 @@ async def tune_model_diffusion(
         model=train_request.model,
         model_type=train_request.model_type,
         expected_repo_name=train_request.expected_repo_name,
+        hours_to_complete=train_request.hours_to_complete
     )
     logger.info(f"Created job {job}")
     worker_config.trainer.enqueue_job(job)
