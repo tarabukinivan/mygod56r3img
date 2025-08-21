@@ -171,7 +171,8 @@ def create_job_diffusion(
     model: str,
     dataset_zip: str,
     model_type: ImageModelType,
-    expected_repo_name: str | None
+    expected_repo_name: str | None,
+    hours_to_complete: str,
 ):
     return DiffusionJob(
         job_id=job_id,
@@ -179,6 +180,7 @@ def create_job_diffusion(
         dataset_zip=dataset_zip,
         model_type=model_type,
         expected_repo_name=expected_repo_name,
+        hours_to_complete=hours_to_complete,
     )
 
 
