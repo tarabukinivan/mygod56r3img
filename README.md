@@ -1,4 +1,4 @@
-<h1 align="center">G.O.D Subnet</h1>
+<h1 align="center">G.O.D</h1>
 
 
 🚀 Welcome to the [Gradients on Demand](https://gradients.io) Subnet
